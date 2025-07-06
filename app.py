@@ -24,9 +24,9 @@ def load_pkl(path):
 
 # Load models
 try:
-    aif_model = load_model(r"new_models/AIF/pic/aif_rf_model.joblib")
-    aif_scaler = load_model(r"new_models/AIF/pic/aif_rf_scaler.joblib")
-    aif_label_enc = load_model(r"new_models/AIF/pic/aif_rf_le.joblib")
+    aif_model = load_model(r"new_models/AIF/jl/aif_rf_model.joblib")
+    aif_scaler = load_model(r"new_models/AIF/jl/aif_rf_scaler.joblib")
+    aif_label_enc = load_model(r"new_models/AIF/jl/aif_rf_le.joblib")
 
     sent_model = load_model(r"new_models/Sentiment/jl/sent_rf_model.joblib")
     sent_scaler = load_model(r"new_models/Sentiment/jl/sent_rf_scaler.joblib")
