@@ -1,7 +1,0 @@
-Flask==3.1.1
-numpy==1.26.4
-pandas==1.5.3          # Downgraded to avoid Cython compile
-scikit-learn==1.3.2    # This version works with Python 3.10
-joblib==1.4.2
-cloudpickle>=2.0.0
-gunicorn
