@@ -24,17 +24,17 @@ def load_pkl(path):
 
 # Load models
 try:
-    aif_model = load_model(r"H:\Text Mining\Tamil poems\Webpage\new_models\AIF\jl\aif_rf_model.joblib")
-    aif_scaler = load_model(r"H:\Text Mining\Tamil poems\Webpage\new_models\AIF\jl\aif_rf_scaler.joblib")
-    aif_label_enc = load_model(r"H:\Text Mining\Tamil poems\Webpage\new_models\AIF\jl\aif_rf_le.joblib")
+    aif_model = load_model(r"new_models/AIF/jl/aif_rf_model.joblib")
+    aif_scaler = load_model(r"new_models/AIF/jl/aif_rf_scaler.joblib")
+    aif_label_enc = load_model(r"new_models/AIF/jl/aif_rf_le.joblib")
 
-    sent_model = load_model(r"H:\Text Mining\Tamil poems\Webpage\new_models\Sentiment\jl\sent_rf_model.joblib")
-    sent_scaler = load_model(r"H:\Text Mining\Tamil poems\Webpage\new_models\Sentiment\jl\sent_rf_scaler.joblib")
-    sent_label_enc = load_model(r"H:\Text Mining\Tamil poems\Webpage\new_models\Sentiment\jl\sent_rf_le.joblib")
+    sent_model = load_model(r"new_models/Sentiment/jl/sent_rf_model.joblib")
+    sent_scaler = load_model(r"new_models/Sentiment/jl/sent_rf_scaler.joblib")
+    sent_label_enc = load_model(r"new_models/Sentiment/jl/sent_rf_le.joblib")
 
-    emo_model = load_model(r"H:\Text Mining\Tamil poems\Webpage\new_models\Emotion\jl\emot_dt_model.joblib")
+    emo_model = load_model(r"new_models/Emotion/jl/emot_dt_model.joblib")
     #emo_scaler = load_model(os.path.join(model_dir, "emot_gbc_scaler.pkl"))
-    emo_label_enc = load_model(r"H:\Text Mining\Tamil poems\Webpage\new_models\Emotion\jl\emot_dt_le.joblib")
+    emo_label_enc = load_model(r"new_models/Emotion/jl/emot_dt_le.joblib")
 
     analyzer = TamilPoemAnalyzer()
     print("All models loaded successfully!")
