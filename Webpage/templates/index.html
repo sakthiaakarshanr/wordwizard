@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamil Poem Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            resize: vertical;
+            box-sizing: border-box;
+        }
+        textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .radio-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .radio-item:hover {
+            background-color: #f0f0f0;
+        }
+        .radio-item input[type="radio"] {
+            margin-right: 10px;
+        }
+        .radio-item label {
+            margin: 0;
+            cursor: pointer;
+            font-weight: normal;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .description {
+            color: #666;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>WordWizard</h1>
+        
+        <form action="/results" method="post">
+            <div class="form-group">
+                <label for="poem">Enter your Tamil poem:</label>
+                <textarea name="poem" id="poem" rows="10" cols="50" 
+                          placeholder="Enter your Tamil poem here..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Select Analysis Type:</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="analysis" value="word" id="word" required>
+                        <label for="word">
+                            <strong>Word Cloud</strong>
+                            <div class="description">Generate a visual word cloud from your poem</div>
+                        </label>
+                    </div>
+                    
+                    <div class="radio-item">
+                        <input type="radio" name="analysis" value="aif" id="aif">
+                        <label for="aif">
+                            <strong>Author Identification</strong>
+                            <div class="description">Predict the author of the poem</div>
+                        </label>
+                    </div>
+                    
+                    <div class="radio-item">
+                        <input type="radio" name="analysis" value="sent" id="sent">
+                        <label for="sent">
+                            <strong>Sentiment Analysis</strong>
+                            <div class="description">Analyze the emotional tone of the poem</div>
+                        </label>
+                    </div>
+                    
+                    <div class="radio-item">
+                        <input type="radio" name="analysis" value="emo" id="emo">
+                        <label for="emo">
+                            <strong>Emotion Detection</strong>
+                            <div class="description">Detect specific emotions in the poem</div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Analyze Poem</button>
+        </form>
+    </div>
+</body>
+</html>
