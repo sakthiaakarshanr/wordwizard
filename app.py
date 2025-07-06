@@ -2,9 +2,6 @@ import os
 import joblib
 import pandas as pd
 from flask import Flask, render_template, request, send_file
-from io import BytesIO
-import matplotlib.pyplot as plt
-from wordcloud import WordCloud
 import pickle
 import cloudpickle
 
