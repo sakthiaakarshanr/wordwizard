@@ -1,6 +1,6 @@
 Flask==3.1.1
 numpy==1.26.4
-pandas==2.1.4
+pandas==1.5.3         # ✅ Changed for compatibility
 scikit-learn==1.3.2
 joblib==1.4.2
 cloudpickle>=2.0.0
